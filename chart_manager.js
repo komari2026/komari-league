@@ -108,7 +108,7 @@ async function drawTeamRankingChart(targetTeamName, maxRound) {
     // 第1節から最新節まで計算
     for (let r = 1; r <= maxRound; r++) {
         try {
-            const response = await fetch(`../data/round_${r}.json`);
+            const response = await fetch(`./data/round_${r}.json`);
             if (!response.ok) break; 
             
             const roundData = await response.json();
