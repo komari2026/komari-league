@@ -1,7 +1,7 @@
 // ==========================================================================
 // 1. 状態管理 (Global State) & 初期化
 // ==========================================================================
-window.currentRound = 1;       // 現在表示している節（試合結果用）
+window.currentRound = null;       // 現在表示している節（試合結果用）
 window.currentDivision = '1';   // 現在表示しているリーグ（'1' または '2'）
 let activeTab = 'matches';   // 現在のメインタブ（'matches', 'ranking', 'charts'）
 
@@ -21,8 +21,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log("2/3: 選手データの読み込みを開始します...");
         await loadPlayersCSV();
         
-        console.log("3/3: 試合日程・結果の読み込みを開始します...");
+       console.log("3/3: 試合日程・結果の読み込みを開始します...");
         await loadAllRounds();
+        
+        // 💡 ここで最新の節をセット！
+        // allRoundsData.length が今読み込んでいるデータの総数です
+        window.currentRound = allRoundsData.length; 
         
     } catch (error) {
         console.error("❌ データのロード中にエラーが発生しました:", error);
