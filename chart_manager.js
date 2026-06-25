@@ -118,17 +118,16 @@ async function drawTeamRankingChart(targetTeamName, maxRound) {
         const roundData = await response.json();
 
         // 💡 判定をより厳密にします
+        // 試合結果チェックの部分をこれに差し替えてください
         const matches = (targetDivision === '1') ? roundData.j1_matches : roundData.j2_matches;
-        
-        // データがない、あるいは配列じゃない場合はスキップ
-        if (!matches || !Array.isArray(matches)) {
-            console.log(`第${r}節: このディビジョンの試合データがありません`);
+
+        if (!matches) {
+            console.log(`第${r}節: 試合データそのものが見つかりません`);
             break;
         }
 
-        // ここで試合結果をチェック
         if (matches.length > 0 && matches[0].home_score === null) {
-            console.log(`第${r}節: まだ試合が行われていません`);
+            console.log(`第${r}節: 1試合目のスコアが null なので停止します。データ:`, matches[0]);
             break;
         }
 
