@@ -162,16 +162,26 @@ function switchDivision(division) {
 // ==========================================================================
 async function loadAllRounds() {
     allRoundsData = [];
-    let r = 1; let hasMoreData = true;
+    let r = 1; 
+    let hasMoreData = true;
+    
     while (hasMoreData) {
         try {
             const response = await fetch(`./data/round_${r}.json`);
-            if (!response.ok) { hasMoreData = false; }
-            else { allRoundsData.push(await response.json()); r++; }
-        } catch (error) { hasMoreData = false; }
+            if (!response.ok) { 
+                hasMoreData = false; 
+            } else { 
+                allRoundsData.push(await response.json()); 
+                r++; 
+            }
+        } catch (error) { 
+            hasMoreData = false; 
+        }
     }
-    // 💡 最終節ではなく、起動時は必ず「第 1 節」を表示するように固定する！
-    window.currentRound = 1;
+    
+    // 💡 修正：読み込めたデータの数（r-1）を最終節としてセットする！
+    window.currentRound = r - 1; 
+    console.log(`データの読み込み完了。最終節は第${window.currentRound}節です。`);
 }
 
 async function loadTeamsData() {
