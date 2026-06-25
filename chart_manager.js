@@ -109,7 +109,11 @@ async function drawTeamRankingChart(targetTeamName, maxRound) {
     for (let r = 1; r <= maxRound; r++) {
     try {
         const response = await fetch(`./data/round_${r}.json`);
-        if (!response.ok) break; 
+        // 修正前: if (!response.ok) break;
+        if (!response.ok) {
+            console.log(`第${r}節のファイルが見つかりません。計算を終了します。`);
+            break; 
+        }
         
         const roundData = await response.json();
 
