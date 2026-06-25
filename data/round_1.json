@@ -1,0 +1,247 @@
+{
+    "round": 1,
+    "j1_matches": [
+        {
+            "home": "歌川アリアーレ",
+            "away": "フェリダ虹吹",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "中西 祐介なかにし ゆうすけ",
+                "木下 裕介きのした ゆうすけ"
+            ],
+            "away_scorers": [
+                "マテウス・コスタ"
+            ]
+        },
+        {
+            "home": "城島セレーナ",
+            "away": "鶴牧ブリランテ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "新井 健太あらい けんた"
+            ],
+            "away_scorers": [
+                "戸袋 健吾とぶくろ けんご"
+            ]
+        },
+        {
+            "home": "千都アルディーレ",
+            "away": "ルセリオ峰岡",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "秦 宗一郎",
+                "永吉 啓太ながよし けいた"
+            ],
+            "away_scorers": [
+                "後藤 浩紀ごとう ひろき"
+            ]
+        },
+        {
+            "home": "ルシエル星丘",
+            "away": "都井沢レガリスタ",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "城田 禎しろた ただし",
+                "徳田 清明とくだ きよあき"
+            ],
+            "away_scorers": [
+                "織田 浩司おだ こうじ"
+            ]
+        },
+        {
+            "home": "浜見デルマーレ",
+            "away": "七沢ユノセラ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "山野 宏一やまの ひろかず"
+            ],
+            "away_scorers": [
+                "大橋 治郎おおはし じろう"
+            ]
+        },
+        {
+            "home": "美里フロリスFC",
+            "away": "大神エスペランザ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "有馬 雅孝ありま まさたか"
+            ],
+            "away_scorers": [
+                "豊田 貴郁とよだ たかふみ"
+            ]
+        },
+        {
+            "home": "エルネスタ永山FC",
+            "away": "桃浜ロゼルナ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "吉岡 俊輔よしおか しゅんすけ"
+            ],
+            "away_scorers": [
+                "ローガン・トランブレ"
+            ]
+        },
+        {
+            "home": "六辻ヴェルティア",
+            "away": "千都レイヴンス",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "キム・ジュンキム・ジュン",
+                "落合 直樹おちあい なおき"
+            ],
+            "away_scorers": [
+                "町田 竜太まちだ りょうた"
+            ]
+        },
+        {
+            "home": "都井沢マリリオ",
+            "away": "国分FC",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "近藤 和英こんどう かずひで",
+                "近藤 和英こんどう かずひで"
+            ],
+            "away_scorers": [
+                "淺野 孝一あさの こういち"
+            ]
+        }
+    ],
+    "j2_matches": [
+        {
+            "home": "影取カーヴェリオ",
+            "away": "若洲アズール",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "藤田 憲二ふじた けんじ"
+            ],
+            "away_scorers": [
+                "山中 将吾やまなか しょうご"
+            ]
+        },
+        {
+            "home": "八重咲ヴェルメリア",
+            "away": "クラリーダ夏島",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "峯川 智みねかわ さとる",
+                "行方 直也なみかた なおや"
+            ],
+            "away_scorers": [
+                "渡部 宏司わたなべ ひろし"
+            ]
+        },
+        {
+            "home": "成木シティFC",
+            "away": "内海FC",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "守屋 雅和もりや まさかず",
+                "守屋 雅和もりや まさかず"
+            ],
+            "away_scorers": [
+                "藤中 文貴ふじなか ふみたか"
+            ]
+        },
+        {
+            "home": "セルヴァ鵜野森",
+            "away": "アストラル月夜野",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "宮川 和之みやがわ かずゆき"
+            ],
+            "away_scorers": [
+                "小笹 朋治こざさ ともはる"
+            ]
+        },
+        {
+            "home": "月夜野セレネFC",
+            "away": "FC山吹",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "上紺屋 卓かみこんや たく"
+            ],
+            "away_scorers": [
+                "トーマス・ウェイン・カー"
+            ]
+        },
+        {
+            "home": "浜岳セルヴェリオ",
+            "away": "城南レイクランツ",
+            "home_score": 2,
+            "away_score": 2,
+            "home_scorers": [
+                "勝川 浩史かつかわ ひろし",
+                "勝川 浩史かつかわ ひろし"
+            ],
+            "away_scorers": [
+                "松原 宏和まつばら ひろかず",
+                "松原 宏和まつばら ひろかず"
+            ]
+        },
+        {
+            "home": "江東ヴィアージュ",
+            "away": "吉野浜ルーチェ",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "恩田 伸一おんだ しんいち",
+                "恩田 伸一おんだ しんいち"
+            ],
+            "away_scorers": [
+                "フェデリコ・リッチ"
+            ]
+        },
+        {
+            "home": "滝沢カスケーダ",
+            "away": "ヴァルゴラ辻山",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "初山 隼人はつやま はやと",
+                "壷内 雄太つぼうち ゆうた"
+            ],
+            "away_scorers": [
+                "太田 光彰おおた みつあ"
+            ]
+        },
+        {
+            "home": "香柏ルヴァーナ",
+            "away": "渡内ユナイテッド",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "小林 喜久男おおくぼ きくお"
+            ],
+            "away_scorers": [
+                "芹澤 達也せりざわ たつや"
+            ]
+        },
+        {
+            "home": "柚木ソリス",
+            "away": "梅郷アマリリス",
+            "home_score": 1,
+            "away_score": 2,
+            "home_scorers": [
+                "原 佑介はら ゆうすけ"
+            ],
+            "away_scorers": [
+                "山澤 悠生やまざわ ゆうき",
+                "岡村 高則おかむら たかのり"
+            ]
+        }
+    ]
+}

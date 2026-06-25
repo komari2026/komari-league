@@ -1,0 +1,243 @@
+{
+    "round": 6,
+    "j1_matches": [
+        {
+            "home": "大神エスペランザ",
+            "away": "歌川アリアーレ",
+            "home_score": 2,
+            "away_score": 2,
+            "home_scorers": [
+                "室賀 英俊むろが ひでとし",
+                "オ・シウ"
+            ],
+            "away_scorers": [
+                "坪内 暁彦つぼうち あきひこ",
+                "ダヴィデ・モレッティ"
+            ]
+        },
+        {
+            "home": "桃浜ロゼルナ",
+            "away": "七沢ユノセラ",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "堀 貴史ほり たかふみ",
+                "石丸 恵介いしまる けいすけ"
+            ],
+            "away_scorers": [
+                "ニコラス・ジェイ・ホワイト"
+            ]
+        },
+        {
+            "home": "千都レイヴンス",
+            "away": "都井沢レガリスタ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "北川 正治きたがわ しょうじ"
+            ],
+            "away_scorers": [
+                "安藤 尚志あんどう たかし"
+            ]
+        },
+        {
+            "home": "国分FC",
+            "away": "ルセリオ峰岡",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "小形 康人おがた やすひと"
+            ],
+            "away_scorers": [
+                "後藤 浩紀ごとう ひろき"
+            ]
+        },
+        {
+            "home": "都井沢マリリオ",
+            "away": "鶴牧ブリランテ",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "近藤 和英こんどう かずひで",
+                "小林 勝幸こばやし かつゆき"
+            ],
+            "away_scorers": [
+                "井口 佳紀いぐち よしのり"
+            ]
+        },
+        {
+            "home": "六辻ヴェルティア",
+            "away": "フェリダ虹吹",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "キム・ヨンホ"
+            ],
+            "away_scorers": [
+                "川連 晋太郎かわつれ しんたろう"
+            ]
+        },
+        {
+            "home": "エルネスタ永山FC",
+            "away": "城島セレーナ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "竹内 太朗たけうち たろう"
+            ],
+            "away_scorers": [
+                "秋本 雅規あきもと まさき"
+            ]
+        },
+        {
+            "home": "美里フロリスFC",
+            "away": "千都アルディーレ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "杉浦 浩巳すぎうら ひろみ"
+            ],
+            "away_scorers": [
+                "秦 宗一郎"
+            ]
+        },
+        {
+            "home": "浜見デルマーレ",
+            "away": "ルシエル星丘",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "若狭 淳一わかさ じゅんいち"
+            ],
+            "away_scorers": [
+                "関矢 紳吾せきや しんご"
+            ]
+        }
+    ],
+    "j2_matches": [
+        {
+            "home": "城南レイクランツ",
+            "away": "影取カーヴェリオ",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "高倉 誠司たかくら せいじ"
+            ],
+            "away_scorers": [
+                "岡村 篤志おかむら あつし"
+            ]
+        },
+        {
+            "home": "吉野浜ルーチェ",
+            "away": "FC山吹",
+            "home_score": 1,
+            "away_score": 2,
+            "home_scorers": [
+                "尾関 守彦おぜき もりひこ"
+            ],
+            "away_scorers": [
+                "黄川田 和毅きかわだ かずき",
+                "日高 翼ひだか つばさ"
+            ]
+        },
+        {
+            "home": "ヴァルゴラ辻山",
+            "away": "アストラル月夜野",
+            "home_score": 1,
+            "away_score": 2,
+            "home_scorers": [
+                "堤 翔つつみ しょう"
+            ],
+            "away_scorers": [
+                "石田 真彦いしだ まさひこ",
+                "藤澤 俊祐ふじさわ しゅんすけ"
+            ]
+        },
+        {
+            "home": "渡内ユナイテッド",
+            "away": "内海FC",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "小松 大貴こまつ だいき"
+            ],
+            "away_scorers": [
+                "日野 将大ひの しょうだい"
+            ]
+        },
+        {
+            "home": "梅郷アマリリス",
+            "away": "クラリーダ夏島",
+            "home_score": 2,
+            "away_score": 1,
+            "home_scorers": [
+                "大瀬戸 博一おおせど ひろかず",
+                "藤沼 研ふじぬま けん"
+            ],
+            "away_scorers": [
+                "角田 康幸つのだ やすゆき"
+            ]
+        },
+        {
+            "home": "柚木ソリス",
+            "away": "若洲アズール",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "渡辺 博久わたなべ ひろひさ"
+            ],
+            "away_scorers": [
+                "伊東 和弘いとう かずひろ"
+            ]
+        },
+        {
+            "home": "香柏ルヴァーナ",
+            "away": "八重咲ヴェルメリア",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "和田 俊輔わだ しゅんすけ"
+            ],
+            "away_scorers": [
+                "関 淳せき あつし"
+            ]
+        },
+        {
+            "home": "滝沢カスケーダ",
+            "away": "成木シティFC",
+            "home_score": 1,
+            "away_score": 2,
+            "home_scorers": [
+                "初山 隼人はつやま はやと"
+            ],
+            "away_scorers": [
+                "西原 謙一にしはら けんいち",
+                "神田 充かんだ みつる"
+            ]
+        },
+        {
+            "home": "江東ヴィアージュ",
+            "away": "セルヴァ鵜野森",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "ロドリゴ・マルティンス"
+            ],
+            "away_scorers": [
+                "山口 穂高やまぐち ほだか"
+            ]
+        },
+        {
+            "home": "浜岳セルヴェリオ",
+            "away": "月夜野セレネFC",
+            "home_score": 1,
+            "away_score": 1,
+            "home_scorers": [
+                "今村 寛文いまむら ひろふみ"
+            ],
+            "away_scorers": [
+                "後藤 道大ごとう みちひろ"
+            ]
+        }
+    ]
+}
