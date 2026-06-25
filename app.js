@@ -171,7 +171,7 @@ async function loadAllRounds() {
         } catch (error) { hasMoreData = false; }
     }
     // 💡 最終節ではなく、起動時は必ず「第 1 節」を表示するように固定する！
-    window.currentRound = 1;
+    window.currentRound = 10;
 }
 
 async function loadTeamsData() {
