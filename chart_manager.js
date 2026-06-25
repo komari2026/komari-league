@@ -107,24 +107,30 @@ async function drawTeamRankingChart(targetTeamName, maxRound) {
     // 第1節から最新節まで計算
     // 第1節から最新節まで計算
     for (let r = 1; r <= maxRound; r++) {
-        try {
-            const response = await fetch(`./data/round_${r}.json`);
-            if (!response.ok) break; 
-            
-            const roundData = await response.json();
+    try {
+        const response = await fetch(`./data/round_${r}.json`);
+        if (!response.ok) break; 
+        
+        const roundData = await response.json();
 
-            const matches = targetDivision === '1' ? roundData.j1_matches : roundData.j2_matches;
-            if (!matches) continue;
+        // 💡 判定をより厳密にします
+        const matches = (targetDivision === '1') ? roundData.j1_matches : roundData.j2_matches;
+        
+        // データがない、あるいは配列じゃない場合はスキップ
+        if (!matches || !Array.isArray(matches)) {
+            console.log(`第${r}節: このディビジョンの試合データがありません`);
+            break;
+        }
 
-            // 💡【ここを追加！】
-            // その節の最初の試合が未消化（home_scoreが null）の場合、
-            // それ以降の節はまだシミュレーションしていない未来の節なので、ここで計算をストップしてループを抜ける
-            if (matches.length > 0 && matches[0].home_score === null) {
-                break;
-            }
+        // ここで試合結果をチェック
+        if (matches.length > 0 && matches[0].home_score === null) {
+            console.log(`第${r}節: まだ試合が行われていません`);
+            break;
+        }
 
-            // この節は試合が行われているので、ラベルを追加
-            roundLabels.push(`第${r}節`);
+        // ラベル追加
+        roundLabels.push(`第${r}節`);
+        console.log(`第${r}節を計算中...`);
 
             matches.forEach(match => {
                 const home = match.home;
