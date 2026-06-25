@@ -165,7 +165,7 @@ async function loadAllRounds() {
     let r = 1; let hasMoreData = true;
     while (hasMoreData) {
         try {
-            const response = await fetch(`../data/round_${r}.json`);
+            const response = await fetch(`./data/round_${r}.json`);
             if (!response.ok) { hasMoreData = false; }
             else { allRoundsData.push(await response.json()); r++; }
         } catch (error) { hasMoreData = false; }
@@ -197,7 +197,7 @@ async function loadPlayersCSV() {
             attempts++;
         }
 
-        const response = await fetch(`../players.csv`);
+        const response = await fetch(`./players.csv`);
         if (!response.ok) {
             console.error(`❌ CSVの読み込みに失敗しました。ステータス: ${response.status}`);
             return;
