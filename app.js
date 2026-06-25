@@ -317,7 +317,7 @@ function updateView() {
 
 function getLogoPath(teamName) {
     if (!teamName) return 'images/logos/default.png';
-    return `images/logos/${teamName.trim()}.jpg`; 
+    return `web/images/logos/${teamName.trim()}.jpg`; 
 }
 
 function showTeamDetail(teamName) {
