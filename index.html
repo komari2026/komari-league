@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMARI LEAGUE Official Site</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>🏆 KOMARI LEAGUE</h1>
+        <p class="subtitle">Official Match Center</p>
+    </header>
+
+    <main class="container">
+        <nav class="main-nav">
+            <button id="nav-matches" class="nav-btn active">📅 試合結果</button>
+            <button id="nav-ranking" class="nav-btn">📊 順位表</button>
+            <button id="nav-charts" class="nav-btn">📈 順位推移</button>
+            <button id="nav-players" class="nav-btn">⚽ 選手名鑑</button>
+        </nav>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchDivision('1')">🟥 1部リーグ</button>
+            <button class="tab-btn" onclick="switchDivision('2')">🟦 2部リーグ</button>
+        </div>
+
+        <div id="content-matches" class="content-section">
+            <section class="round-selector">
+                <button id="prev-btn">◀ 前の節</button>
+                <h2 id="round-title">第 1 節 試合結果</h2>
+                <button id="next-btn">次の節 ▶</button>
+            </section>
+
+            <section id="match-list" class="match-list">
+                <p class="loading">データを読み込み中...</p>
+            </section>
+        </div>
+
+        <div id="content-ranking" class="content-section d-none">
+            <div class="ranking-wrapper">
+                <table class="ranking-table">
+                    <thead>
+                        <tr>
+                            <th class="th-rank">順位</th>
+                            <th class="th-team">クラブ名</th>
+                            <th>試合</th>
+                            <th>勝点</th>
+                            <th>勝</th>
+                            <th>分</th>
+                            <th>敗</th>
+                            <th>得点</th>
+                            <th>失点</th>
+                            <th>得失</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body">
+                        <tr>
+                            <td colspan="10" class="loading">順位表を計算中...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="ranking-legend">
+                <span class="legend-item acl">■ 1部：ACL出場圏 (1位〜3位) ／ 2部：自動昇格圏 (1位〜2位)</span>
+                <span class="legend-item po">■ 2部：昇格プレーオフ圏 (3位〜6位)</span>
+                <span class="legend-item relegation">■ 1部：自動降格圏 (16位〜18位)</span>
+            </div>
+        </div>
+
+        <div id="content-charts" class="content-section d-none">
+            <div style="background-color: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; max-width: 300px;">
+                    <label for="chart-team-selector" style="font-weight: bold; color: #a0aec0; font-size: 0.9rem;">分析チーム選択:</label>
+                    <select id="chart-team-selector" style="background: #11141a; color: white; border: 1px solid var(--border-color); padding: 10px 16px; border-radius: 4px; font-size: 1rem; cursor: pointer; width: 100%; max-height: 300px;">
+                    </select>
+                </div>
+                
+                <div class="chart-container" style="position: relative; height:400px; width:100%; background: #11141a; padding: 15px; border-radius: 8px; box-sizing: border-box;">
+                    <canvas id="rankingChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-players" class="content-section d-none">
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; max-width: 300px;">
+                <label for="directory-team-selector" style="font-weight: bold; color: #a0aec0; font-size: 0.9rem;">クラブ選択:</label>
+                <select id="directory-team-selector" style="background: #11141a; color: white; border: 1px solid var(--border-color); padding: 10px 16px; border-radius: 6px; font-size: 1rem; cursor: pointer; width: 100%;">
+                </select>
+            </div>
+            
+            <table class="player-table" style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--border-color);">
+                        <th class="th-no" style="width: 11%;">背番号</th>
+                        <th class="th-pos" style="width: 11%;">位置</th>
+                        <th class="th-pname" style="width: 26%; text-align: left;">選手名</th>
+                        <th class="th-stat" style="width: 7.5%; text-align: right;">攻撃</th>
+                        <th class="th-stat" style="width: 7.5%; text-align: right;">守備</th>
+                        <th class="th-stat" style="width: 7.5%; text-align: right;">技術</th>
+                        <th class="th-stat" style="width: 7.5%; text-align: right;">フィ</th>
+                        <th class="th-stat" style="width: 7.5%; text-align: right;">スタ</th>
+                        <th class="th-stat" style="width: 7.5%; text-align: right;">精神</th>
+                        <th class="th-stat-sum" style="width: 9%; text-align: right;">総合値</th>
+                    </tr>
+                </thead>
+                <tbody id="directory-players-body">
+                    <tr>
+                        <td colspan="10" class="sub-text" style="text-align: center; padding: 40px;">クラブを選択してください</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section id="team-detail-section" class="team-detail-box d-none">
+            <div class="detail-header">
+                <div class="detail-title-wrap">
+                    <img id="detail-logo" src="" alt="" class="club-logo">
+                    <h2 id="detail-team-name">チーム名</h2>
+                </div>
+                <button id="close-detail-btn" class="close-btn">×</button>
+            </div>
+            
+            <div class="detail-body">
+                <div class="info-grid">
+                    <div class="info-item"><strong>ホームタウン:</strong> <span id="detail-hometown">-</span></div>
+                    <div class="info-item"><strong>スタジアム:</strong> <span id="detail-stadium">-</span></div>
+                </div>
+                <p id="detail-desc" class="detail-description">チームの説明がここに表示されます。</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="match-modal" class="modal d-none">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">×</button>
+            <h2 id="modal-round-title" class="modal-title">試合詳細</h2>
+            
+            <div class="match-detail-header">
+                <div class="modal-team home-team">
+                    <img id="modal-home-logo" src="" alt="" class="modal-logo">
+                    <span id="modal-home-name">ホーム</span>
+                </div>
+                <div class="modal-score">
+                    <span id="modal-home-score">-</span>
+                    <span class="score-hyphen">:</span>
+                    <span id="modal-away-score">-</span>
+                </div>
+                <div class="modal-team away-team">
+                    <span id="modal-away-name">アウェイ</span>
+                    <img id="modal-away-logo" src="" alt="" class="modal-logo">
+                </div>
+            </div>
+
+            <div class="match-detail-body">
+                <div class="detail-section scorers-section">
+                    <h3>⚽ 得点者</h3>
+                    <div class="scorers-container">
+                        <div id="modal-home-scorers" class="scorer-list"></div>
+                        <div class="scorer-spacer"></div>
+                        <div id="modal-away-scorers" class="scorer-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="match_manager.js"></script>
+    <script src="chart_manager.js"></script> 
+    <script src="player_manager.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
