@@ -21,12 +21,27 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log("2/3: 選手データの読み込みを開始します...");
         await loadPlayersCSV();
         
-       console.log("3/3: 試合日程・結果の読み込みを開始します...");
+        console.log("3/3: 試合日程・結果の読み込みを開始します...");
         await loadAllRounds();
+
+        // 💡 修正：読み込んだデータの中で、試合結果が埋まっている最新の節を探す
+        // allRoundsData は 0 から始まるので、インデックス r は 節番号-1 です
+        let latestRound = 1;
+        for (let i = allRoundsData.length - 1; i >= 0; i--) {
+            const round = allRoundsData[i];
+            // 1部または2部の最初の試合を見て、スコアが null でなければ「試合済み」と判断
+            const matches = round.j1_matches || round.j2_matches;
+            if (matches && matches[0] && matches[0].home_score !== null) {
+                latestRound = i + 1; // インデックスを節番号に戻す
+                break;
+            }
+        }
         
-        // 💡 ここで最新の節をセット！
-        // allRoundsData.length が今読み込んでいるデータの総数です
-        window.currentRound = allRoundsData.length; 
+        window.currentRound = latestRound;
+        console.log(`初期表示を第${window.currentRound}節に設定しました。`);
+        
+        // 最後に表示を更新
+        updateView(activeTab);
         
     } catch (error) {
         console.error("❌ データのロード中にエラーが発生しました:", error);
